@@ -12,7 +12,7 @@ const app = express();
 
 // CORS configuration options
 const corsOptions = {
-    origin: ['http://localhost:3000'], // Add allowed origins here
+    origin: '*', // Add allowed origins here
 };
 
 // Middleware
