@@ -23,7 +23,7 @@ router.route('stories/:id')
     .get(downloadStory);
 
 router.post('/:id/like',  likeStory);
-// router.post('/:id/bookmark',  bookmarkStory);
+
 router.post('/:id/bookmark', protect, bookmarkStory);
 
 router.get('/:id/download', downloadStory);

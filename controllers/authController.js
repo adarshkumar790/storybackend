@@ -4,16 +4,14 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
-// Generate JWT
+
 const generateToken = (id) => {
     return jwt.sign({ id }, 'adarsh', {
         expiresIn: '30d',
     });
 };
 
-// @desc    Register a new user
-// @route   POST /api/auth/register
-// @access  Public
+
 const registerUser = async (req, res) => {
     const { username, email, password } = req.body;
     
@@ -45,9 +43,7 @@ const registerUser = async (req, res) => {
     }
 };
 
-// @desc    Authenticate user & get token
-// @route   POST /api/auth/login
-// @access  Public
+
 const authUser = async (req, res) => {
     const { email, password } = req.body;
     
